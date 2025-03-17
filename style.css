@@ -1,0 +1,370 @@
+/* body{
+    margin: 0;
+    padding: 0;
+}
+
+  
+.header{
+background-color: rgb(255, 255, 255);
+width: 100vw;
+height: 10vh;
+z-index: 1;
+font-family: "Playwrite IT Moderna", serif;;
+color: #000000;
+font-size: 50px;
+line-height: 10vh;
+padding-left: 1vw;
+
+}
+
+.main-section{
+    background-color: #ffffff;
+    width: 75vw;
+    height: 90vh;
+    font-family: "Playwrite IT Moderna", serif;;
+    font-size: 50px;
+}
+
+    
+
+.sidebar{
+background-color: rgb(255, 255, 255);
+width: 25vw;
+height: 90vh;
+position: absolute;
+left: 75vw;
+top: 10vh;
+z-index: -1;
+}
+
+.poem{
+    position: 50vh;
+    margin: 0;
+    padding: 20px;
+    font-family: "Playwrite IT Moderna", serif;;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: all 500ms;
+
+}
+.shrink:hover{
+    font-size: 10px;
+    color: blue;
+}
+
+.skinny:hover{
+    letter-spacing: -2px;
+    color: blue;
+}
+
+img{
+    width: 50%;
+    display: block;
+    margin: auto;
+    filter: blur(2px)
+}
+img:hover{
+    filter: blur(0px);
+    transition: all 5ms;
+} */
+/* p:hover{
+    color: rgb(92, 225, 3);
+} */
+
+/* .faint:hover{
+    color: rgb(10, 3, 225);
+    opacity: 0.2;
+    filter: blur(1px);
+    cursor: pointer;
+}
+
+.expand:hover{
+    color: blue;
+    font-size: 30px;
+}
+
+.hide {
+    opacity:0;
+    
+}
+
+.button{
+    position: absolute;
+    top: 10vh;
+    left: 1vw;
+    background: rgb(226, 186, 7) ;
+    color: red;
+    padding: 10px;
+    border-radius: 50px;
+
+}
+
+.modal{
+    position: fixed;
+    width: 50vh;
+    height: 40vh;
+    background: red;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}    
+
+.show{
+
+display: block;    
+
+}     */
+    
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Ensures content stays in a single line */
+}
+
+.header {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 10vh;
+    font-family: "Playwrite IT Moderna", serif;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 10vh;
+    padding-left: 1vw;
+    text-align: left; /* Ensures the title stays left-aligned */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures it stays above other content */
+}
+
+.main-section {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Playwrite IT Moderna", serif;
+    font-size: 50px;
+
+    /* Center vertically */
+    display: flex;
+    align-items: center; /* Centers vertically */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    padding-top: 10vh; /* Pushes content below header */
+}
+
+.poem {
+    margin: 0 auto; /* Centers horizontally */
+    padding: 20px;
+    font-family: "Playwrite IT Moderna", serif;
+    font-size: 60px; /* Adjust as needed */
+    line-height: 1.5;
+    white-space: nowrap; /* Prevents text from wrapping */
+    text-align: left; /* Keeps it natural for reading */
+    display: inline-block; /* Ensures it stays in one line */
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* img:hover {
+    filter: blur(0px);
+    transition: all 5ms;
+} */
+
+/* .mummy {
+    cursor: pointer;
+} */
+/* mummy */
+
+.floating-image {
+    position: fixed;
+    width: 200px;
+    display: none;
+    pointer-events: none; /* Ensures it doesn't block interactions */
+    z-index: 500; /* Image stays behind the text */
+    opacity: 1; /* Ensure it's fully visible */
+}
+
+.hover-word {
+    position: relative; /* Keeps the text in place */
+    z-index: 1000; /* Ensures text stays above image */
+}
+
+/* in */
+.in:hover {
+    filter: blur(0px);
+    transition: all 5ms;
+}
+
+/* swear */
+.swear:hover {
+    filter: blur(0px);
+    transition: all 5ms;
+}
+
+/*  */
+
+
+
+
+/* small */
+
+.shrink {
+    display: inline-block; /* Prevents layout disruption */
+    width: auto; /* Allows natural width */
+    transition: transform 0.1s ease-in-out; /* Smooth scaling */
+    transform-origin: center; /* Ensures it shrinks from the center */
+}
+/* small */
+.shrink:hover {
+    transform: scale(0.5); /* Shrinks the text without affecting layout */
+    color: blue;
+}
+
+/* thin */
+
+.skinny:hover{
+    letter-spacing: -8px;
+    color: blue;
+}
+
+/* fat */
+.expand:hover {
+    color: blue;
+    font-size: 40px;
+}
+
+/* faint */
+.faint:hover {
+    color: rgb(10, 3, 225);
+    opacity: 0.2;
+    filter: blur(1px);
+    cursor: pointer;
+}
+.sat-container {
+    display: inline-block;
+    width: auto;
+    height: 1em; /* Keeps the space in the text */
+}
+
+.sat {
+    display: inline-block;
+    transition: transform 1.5s ease-in-out, opacity 0.5s;
+}
+
+.sat.drop {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100vh - 100px)); /* Stops above bottom */
+    opacity: 1;
+}
+
+.sat-container::after {
+    content: "sat"; /* Placeholder */
+    visibility: hidden; /* Hide it initially */
+    opacity: 0;
+}
+
+.sat.drop + .sat-container::after {
+    visibility: visible; /* Show placeholder when "sat" drops */
+    opacity: 1;
+}
+
+.sat.drop {
+    opacity: 0; /* Hide the real "sat" when it drops */
+}
+
+
+
+
+/* .button {
+    position: absolute;
+    top: 10vh;
+    left: 1vw;
+    background: rgb(226, 186, 7);
+    color: red;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+} */
+
+.modal {
+    position: fixed;
+    width: 50vh;
+    height: 40vh;
+    background: red;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.play-button {
+    position: fixed;
+    top: 15vh;
+    left: 2vw;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: rgb(128, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.play-button:hover {
+    background: rgb(81, 0, 0);
+}
+
+
+.controls {
+    position: fixed;
+    top: 15vh;
+    left: 2vw;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.controls button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: darkgreen;
+}
+
+.pause-button {
+    background: rgb(255, 98, 0);
+}
+
+.pause-button:hover {
+    background: darkred;
+}
+
+.restart-button {
+    background: orange;
+}
+
+.restart-button:hover {
+    background: darkorange;
+}
+
